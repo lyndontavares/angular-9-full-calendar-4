@@ -1,0 +1,18 @@
+<full-calendar
+  #fullcalendar
+  [plugins]="calendarPlugins" 
+  [editable]="true"
+  [events]="calendarEvents"
+  [defaultView]="'timeGridWeek'"
+  [header]="{
+    left: 'prev,next today',
+    center: 'title',
+    right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+    }"
+  [height]="'auto'"
+  [dir]="'ltr'"
+  [events]="calendarEvents"
+  (dateClick)="onDateClick($event)"
+  (eventClick)="onEventClick($event)" 
+  (eventRender)="onEventRender($event)">
+</full-calendar>
